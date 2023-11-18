@@ -12,11 +12,11 @@ class Questions:
         question = data_dict.get("Question", "")
         options = data_dict.get("Options", [])
         answer = data_dict.get("Answer", "")
+        explanation = data_dict.get("Explanation", "")
 
-        filtered_array = [question, options, answer]
-        print("Multiple Choice: ")
-        print(filtered_array)
-        return filtered_array
+        filtered_array = [question, options, answer, explanation]
+        print(filtered_array, end="\n\n")
+        # return filtered_array
 
     def create_multiple_choice_question(self, topic_query: str):
         messages = [
@@ -33,14 +33,15 @@ class Questions:
 
     def _filter_short_answer_response(self, response):
         filtered_response = response.choices[0].message.content
+        print(filtered_response)
         data_dict = json.loads(filtered_response)
         question = data_dict.get("Question", "")
         answer = data_dict.get("Answer", "")
+        explanation = data_dict.get("Explanation", "")
 
-        filtered_array = [question, answer]
-        print("Short Answer: ")
-        print(filtered_array)
-        return filtered_array
+        filtered_array = [question, answer, explanation]
+        print(filtered_array, end="\n\n")
+        # return filtered_array
      
     def create_short_answer_question(self, topic_query: str):
         messages = [
@@ -60,11 +61,11 @@ class Questions:
         data_dict = json.loads(filtered_response)
         question = data_dict.get("Question", "")
         answer = data_dict.get("Answer", "")
+        explanation = data_dict.get("Explanation", "")
 
-        filtered_array = [question, answer]
-        print("True or False: ")
-        print(filtered_array)
-        return filtered_array
+        filtered_array = [question, answer, explanation]
+        print(filtered_array, end="\n\n")
+        # return filtered_array
      
     def create_true_or_false_question(self, topic_query: str):
         messages = [
