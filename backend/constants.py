@@ -33,5 +33,4 @@ TRUE_OR_FALSE_SYSTEM_BEHAVIOR_PROMPT=f"""
     Return a perfectly working and valid JSON Object in the following format:
         "Question": "The question"
         "Answer": "True or false answer to that question"
-        "Explanation": "A brief explanation for the answer for this question"
 """
