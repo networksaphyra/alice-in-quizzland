@@ -8,9 +8,10 @@ openai.api_key = ai_config.API_KEY
 question_creator = Questions()
 
 @app.route("/members", methods=["GET"])
-def get_preferences():
+def get_preferences() -> dict:
     client_data = request.json
-    topic, multiple_choices_num, short_answer_num, true_or_false_num = client_data
+    topic = client_data["topic"]
+    multiple_choices_num, short_answer_num, true_or_false_num = client_data["multiple_choice_num"], client_data["short_answer_num"], client_data["true_or_false_num"]
     generated_questions = []
 
     for _ in range(multiple_choices_num):
