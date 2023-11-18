@@ -1,11 +1,11 @@
 from flask import Flask, request
-from question_generator import Questions
+from question_generator import QuestionGenerator
 import ai_config
 import openai
 
 app = Flask(__name__)
 openai.api_key = ai_config.API_KEY
-question_creator = Questions()
+question_creator = QuestionGenerator()
 
 @app.route("/members", methods=["GET"])
 def get_preferences() -> dict:
