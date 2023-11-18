@@ -26,7 +26,7 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{background: "#21242b"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -119,6 +119,14 @@ export const Navbar = () => {
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 Quiz
+              </Button>
+              <Button
+                key="practice"
+                onClick={handleCloseNavMenu}
+                href='/practice'
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Practice
               </Button>
               <Button
                 key="statistics"
