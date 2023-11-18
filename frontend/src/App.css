@@ -34,3 +34,7 @@ h2 {
 .logo {
   height: 30vh;
 }
+
+FormControl > * {
+  margin-bottom: 1 vh;
+}
