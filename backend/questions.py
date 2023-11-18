@@ -6,8 +6,8 @@ class Questions:
         self.client = openai.OpenAI(api_key=constants.API_KEY)
 
     def filter_multiple_choice_response(self, response):
-        filtered_reponse = response.choices[0].message.content
-        return filtered_reponse
+        filtered_response = response.choices[0].message
+        return filtered_response
 
     def create_multiple_choice_question(self, query: str):
         messages = [
@@ -21,7 +21,6 @@ class Questions:
             max_tokens = constants.MULTIPLE_CHOICE_MAX_TOKENS
         ) 
         print(response)
-        return f"Filtered Reponse : {response.choices[0].message}"
 
     def create_short_answer_question():
         pass
