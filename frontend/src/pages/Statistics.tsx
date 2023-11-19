@@ -2,7 +2,7 @@ import { store } from "../store";
 
 export const Statistics = () => {
     let quiz = store.get.quizzes();
-
+    
     return <>
     
         <div>{quiz[0].quiz.multipleChoice.map(
@@ -11,7 +11,7 @@ export const Statistics = () => {
                 <p>{elem.question}</p>
                 <ol>
                 {elem.options.map((e : any) => {
-                    console.log(e);
+                    console.log(quiz)
                     return <li>{e}</li>
                 })}
                 </ol>

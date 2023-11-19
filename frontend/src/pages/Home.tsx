@@ -11,9 +11,6 @@ export const Home = () => {
             <button className="knock-button" onClick={() => history("/quiz")} >Knock to go in</button>
             <div className="rabbit rabbit-left"></div>
             <div className="rabbit rabbit-right"></div>
-            <audio autoPlay loop>
-                <source src="bgm.mp3" type="audio/mpeg" />
-            </audio>
         </div>
     );
 }
