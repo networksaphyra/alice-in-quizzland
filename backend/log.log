@@ -1,0 +1,64 @@
+[
+    {
+        "Question": "Is thermal physics the study of heat and temperature?",
+        "Answer": "True",
+        "Explanation": "Yes, thermal physics is the branch of physics that deals with the study of heat and temperature and their relation to energy and work."
+    }
+]
+
+[
+    {
+        "Question": "What is thermal physics?",
+        "Answer": "Thermal physics is the branch of physics that deals with the study of heat and temperature and their relationship to energy and work.",
+        "Explanation": "It focuses on understanding the behavior of systems and materials at the molecular level in relation to temperature and heat transfer."
+    }
+]
+
+[
+    {
+        "Question": "What is the primary method of heat transfer in a vacuum?",
+        "Options": ["Conduction", "Convection", "Radiation", "Advection"],
+        "Answer": "Radiation",
+        "Explanation": "In a vacuum, where there is no medium for conduction or convection, heat transfer occurs through electromagnetic radiation, such as infrared radiation."
+    }
+]
+
+[
+    {
+        "Question": "What is the primary method of heat transfer in a vacuum?",
+        "Options": ["Conduction", "Convection", "Radiation", "Evaporation"],
+        "Answer": "Radiation",
+        "Explanation": "In a vacuum, where there are no particles to transfer heat through conduction or convection, heat is primarily transferred through electromagnetic radiation."
+    },
+    {
+        "Question": "Which law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another?",
+        "Options": ["Zeroth Law", "First Law", "Second Law", "Third Law"],
+        "Answer": "First Law",
+        "Explanation": "The First Law of Thermodynamics, also known as the Law of Conservation of Energy, states that energy cannot be created or destroyed, only transformed from one form to another."
+    },
+    {
+        "Question": "What is the SI unit of thermal conductivity?",
+        "Options": ["Watt", "Kelvin", "Joule", "Watt per meter per Kelvin"],
+        "Answer": "Watt per meter per Kelvin",
+        "Explanation": "The SI unit of thermal conductivity is watts per meter per Kelvin (W/mK), which represents the rate of heat transfer through a material."
+    }
+]
+
+[
+    {
+        "Question": "What is thermal physics?",
+        "Answer": "Thermal physics is the study of the effects of temperature on matter and energy.",
+        "Explanation": "It explores the properties of materials in relation to their temperature, and how heat energy is transferred and transformed."
+    },
+    {
+        "Question": "What are the key concepts in thermal physics?",
+        "Answer": "Key concepts include heat, temperature, thermal equilibrium, specific heat, and the laws of thermodynamics.",
+        "Explanation": "These concepts help in understanding the behavior of matter and energy in relation to temperature changes."
+    },
+    {
+        "Question": "Why is thermal physics important?",
+        "Answer": "Thermal physics is important as it explains natural phenomena like heat transfer, phase transitions, and the functioning of engines and refrigerators.",
+        "Explanation": "It provides insights into various practical applications such as energy production, climate control, and material processing."
+    }
+]
+

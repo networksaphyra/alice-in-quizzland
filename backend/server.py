@@ -1,8 +1,8 @@
 from flask import Flask, request
 from question_generator import QuestionGenerator
-import asyncio
 import ai_config
 import openai
+import asyncio
 
 class RequestHandler:
     def __init__(self):
@@ -22,14 +22,13 @@ class RequestHandler:
 
         generated_questions = []
 
-        tasks = [
-            generated_questions.append(self.question_generator.generate_multiple_choice_question(topic)),
-            generated_questions.append(self.question_generator.generate_short_answer_question(topic)),
-            generated_questions.append(self.question_generator.generate_true_or_false_question(topic))
-        ]
+        # Using asyncio.gather to run multiple coroutines concurrently
+        await asyncio.gather(
+            self.question_generator.generate_multiple_choice_question(topic, generated_questions),
+            self.question_generator.generate_short_answer_question(topic, generated_questions),
+            self.question_generator.generate_true_or_false_question(topic, generated_questions)
+        )
 
-        await asyncio.gather(*tasks)
-        
         return {'generated_questions': generated_questions}, 200
 
     async def check_short_answer(self, client_data) -> dict:
@@ -37,15 +36,17 @@ class RequestHandler:
 
     def run_server(self):
         @self.app.route("/members", methods=["POST"])
-        def handle_requests():
+        def handle_requests_wrapper():
             client_data = request.json
+            # Using asyncio.run to run the async method in the event loop
             return asyncio.run(self.send_generated_questions(client_data=client_data))
 
         @self.app.route("/check", methods=["POST"])
-        def handle_short_answers():
+        def handle_requests():
             client_data = request.json
+            # Using asyncio.run to run the async method in the event loop
             return asyncio.run(self.check_short_answer(client_data=client_data))
-                
+
         self.app.run(debug=True)
 
 if __name__ == '__main__':

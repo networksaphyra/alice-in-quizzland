@@ -18,7 +18,10 @@ export const UserForm = () => {
 
     const submitData = () => {
       const total = multipleChoice + shortAnswer + trueOrFalse;
-
+      
+      console.log(Math.round((multipleChoice / total) * Number(numQuestionsRef.current?.value)));
+      console.log(Math.round((shortAnswer / total) * Number(numQuestionsRef.current?.value)));
+      console.log(Math.round((trueOrFalse / total) * Number(numQuestionsRef.current?.value)));
       axios.post('/members',{
           topic: studyNotesRef.current?.value,
           multipleChoice: Math.round((multipleChoice / total) * Number(numQuestionsRef.current?.value)),

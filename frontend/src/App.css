@@ -1,7 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
+* {
+  overflow: hidden;
+}
+
+.frame {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  height: 120vh;
+}
+
+.frameImg {
+  width: 60vw;
+  height: 100vh;
+  opacity: 0.8;
+}
+
 .App {
-    height: 100vh;
+    max-height: 100vh;
     background-color: #23272f;
     color: #ebecf0;
     font-family: 'Lato', sans-serif;
