@@ -121,7 +121,7 @@ class QuestionGenerator:
             return None
         return data_dict
 
-    async def confirmation_short_answer(self, client_data) -> dict:
+    def confirmation_short_answer(self, client_data) -> dict:
         answer, client_answer = client_data
         while True:
             messages = [

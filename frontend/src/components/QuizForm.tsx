@@ -14,23 +14,24 @@ export const QuizForm = (props : any) : any => {
     const submitQuiz = async (e: any) => {
         let correctShortAnswers : any = {};
         for (let i = 0; i < Object.keys(shortAnswer).length; i++) {
-            let response = await axios.post('/check', {
-                answer: props.quiz.longAnswer[i],
-                client_answer: shortAnswer[i]
-            }, {
+            console.log(props.quiz.longAnswer[i].answer, shortAnswer[i])
+            await axios.post('/check', [
+                props.quiz.longAnswer[i].answer,
+                shortAnswer[i]
+            ], {
             headers: {
                 'Content-Type': 'application/json',
             }
-        })
-            correctShortAnswers[i] = response;
+        }).then(response => {correctShortAnswers[i] = response.data.confirmation[0].Confirmation})
+        console.log(correctShortAnswers)
         }
-        store.use.quizzes().push({
-            quiz: props.quiz,
-            correctTrueOrFalse: correctTrueOrFalse,
-            correctMultipleChoice: correctMultipleChoice,
-            correctShortAnswers: correctShortAnswers
-        });
-        
+        // store.use.quizzes().push({
+        //     quiz: props.quiz,
+        //     correctTrueOrFalse: correctTrueOrFalse,
+        //     correctMultipleChoice: correctMultipleChoice,
+        //     correctShortAnswers: correctShortAnswers
+        // });
+
         return redirect("/stats")
     }
 
