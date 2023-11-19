@@ -114,11 +114,14 @@ export const UserForm = () => {
 
     return (quiz ? <QuizForm quiz={quiz} correctmultiplechoice={correctMultipleChoice} correcttrueorfalse={correctTrueOrFalse} correctshortanswer={correctShortAnswer}/>
         : <div className="quiz-form-container">
-        <h2>Make a New Quiz:</h2>
+        <h2 className="quiz-title">Make a New Quiz:</h2>
         <FormControl>
             <Textarea placeholder="Quiz Name" slotProps={{ textarea: { ref: nameRef } }}/>
+            <p></p>
             <Textarea placeholder="Quiz Topic / Study Notes" slotProps={{ textarea: { ref: studyNotesRef } }} />
+            <p></p>
             <Textarea placeholder="Num of Questions" slotProps={{ textarea: { ref: numQuestionsRef } }} />
+            <p></p>
 
             <Stack spacing={2} direction="row" alignItems="center">
                 <label>Multiple Choice:</label>
@@ -134,10 +137,8 @@ export const UserForm = () => {
                 <label>True or False:</label>
                 <Slider aria-label="trueOrFalse" value={trueOrFalse} onChange={(e, newNum) => { setTrueOrFalse(newNum as number) }} />
             </Stack>
-
             <Button onClick={submitData} >Submit</Button>
         </FormControl>
     </div>
     );
-    
 }
