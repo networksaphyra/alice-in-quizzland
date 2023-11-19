@@ -5,7 +5,7 @@ MODEL = "gpt-3.5-turbo-1106"
 MULTIPLE_CHOICE_TEMPERATURE = 0.1
 MULTIPLE_CHOICE_MAX_TOKENS = 4096
 MULITPLE_CHOICE_OPTION_NUMBER = 4
-MULTIPLE_CHOICE_QUESTION_NUM = 1
+MULTIPLE_CHOICE_QUESTION_NUM = 3
 MULITPLE_CHOICE_SYSTEM_BEHAVIOR_PROMPT=f"""
     Generate {MULTIPLE_CHOICE_QUESTION_NUM} question and multiple-choice options based on the provided topic. 
     Return a perfectly working and valid JSON Array with Objects inside it.
@@ -23,7 +23,7 @@ MULITPLE_CHOICE_SYSTEM_BEHAVIOR_PROMPT=f"""
 # Short Answers
 SHORT_ANSWER_TEMPERATURE = 0.5
 SHORT_ANSWER_MAX_TOKENS = 4096
-SHORT_ANSWER_QUESTION_NUM = 1
+SHORT_ANSWER_QUESTION_NUM = 3
 SHORT_ANSWER_SYSTEM_BEHAVIOR_PROMPT=f"""
     Generate {SHORT_ANSWER_QUESTION_NUM} short question and a short answer on the provided topic. 
     Return a perfectly working and valid JSON Array with Objects inside it.
@@ -40,7 +40,7 @@ SHORT_ANSWER_SYSTEM_BEHAVIOR_PROMPT=f"""
 # True or False
 TRUE_OR_FALSE_TEMPERATURE = 0.1
 TRUE_OR_FALSE_MAX_TOKENS = 4096
-TRUE_OR_FALSE_QUESTION_NUM = 1
+TRUE_OR_FALSE_QUESTION_NUM = 3
 TRUE_OR_FALSE_SYSTEM_BEHAVIOR_PROMPT=f"""
     Generate {TRUE_OR_FALSE_QUESTION_NUM} statements that can only be true or false. Example: Questions: "The Earth is Round", Answer: True. Instead of some generic question such as: Question: "What shape is the earth?"
     Return a perfectly working and valid JSON Array with Objects inside it.
