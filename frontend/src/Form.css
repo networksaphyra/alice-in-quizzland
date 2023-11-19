@@ -21,12 +21,16 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.sliders {
+    margin-bottom: 10px;
+    width: 300px;
+}
+
 FormControl,
 Textarea,
 label,
 Button {
     width: calc(100% - 40px);
-    margin: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
