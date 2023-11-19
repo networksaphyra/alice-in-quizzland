@@ -1,0 +1,23 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: pink;
+    position: relative;
+}
+
+/* Create cute brown circles as background */
+.Home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(brown 5%, transparent 0);
+    background-size: 50px 50px;
+    z-index: -1;
+    pointer-events: none;
+}
