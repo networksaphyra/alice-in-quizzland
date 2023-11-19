@@ -1,4 +1,9 @@
-API_KEY=open(".env", "r").readline().strip()
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+API_KEY=os.getenv("API_KEY")
 MODEL = "gpt-3.5-turbo-1106"
 
 # Mutilple Choice
@@ -53,3 +58,19 @@ TRUE_OR_FALSE_SYSTEM_BEHAVIOR_PROMPT=f"""
     }},
     ]
 """
+
+#SHORT_ANSWER_TEMPERATURE = 0.5
+CONFIRMATION_TEMPERATURE = 0.2
+CONFIRMATION_MAX_TOKENS = 4096
+CONFIRMATION_SYSTEM_BEHAVIOR_PROMPT=f"""
+    You will be provided with two texts, and you will have to see if the texts remotely relay the same information.
+    Return a perfectly working and valid JSON Array with Objects inside it:
+    [
+    {{
+        "Confirmation": "True or False (where True means the answers relay the same information, and false means they do not"),
+    }},
+    ]
+"""
+
+if __name__ == "__main__":
+    print(API_KEY)

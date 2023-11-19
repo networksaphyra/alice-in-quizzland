@@ -22,7 +22,6 @@ class RequestHandler:
 
         generated_questions = []
 
-        # Using asyncio.gather to run multiple coroutines concurrently
         await asyncio.gather(
             self.question_generator.generate_multiple_choice_question(topic, generated_questions),
             self.question_generator.generate_short_answer_question(topic, generated_questions),
@@ -31,21 +30,17 @@ class RequestHandler:
 
         return {'generated_questions': generated_questions}, 200
 
-    async def check_short_answer(self, client_data) -> dict:
-        pass
-
     def run_server(self):
         @self.app.route("/members", methods=["POST"])
         def handle_requests_wrapper():
             client_data = request.json
             # Using asyncio.run to run the async method in the event loop
-            return asyncio.run(self.send_generated_questions(client_data=client_data))
+            return asyncio.run(self.send_generated_questions(client_data))
 
         @self.app.route("/check", methods=["POST"])
         def handle_requests():
             client_data = request.json
-            # Using asyncio.run to run the async method in the event loop
-            return asyncio.run(self.check_short_answer(client_data=client_data))
+            return self.question_generator.confirmation_short_answer(client_data)
 
         self.app.run(debug=True)
 
