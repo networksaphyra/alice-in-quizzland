@@ -1,216 +1,25 @@
-Multiple Choice:
 [
     {
-        "Question": "Which emperor is known for building the Colosseum in Rome?",
-        "Options": ["Julius Caesar", "Augustus", "Nero", "Trajan"],
-        "Answer": "Nero",
-        "Explanation": "Nero is known for initiating the construction of the Colosseum, which was completed during the reign of his successor, Titus."
+        "Question": "Albert Einstein was a famous physicist.",
+        "Answer": "True",
+        "Explanation": "Albert Einstein was indeed a famous physicist known for his theory of relativity and contributions to the field of theoretical physics."
     }
 ]
 
-Short Answer
 [
     {
-        "Question": "What was the Roman Empire?",
-        "Answer": "The Roman Empire was a powerful ancient civilization that emerged from the city of Rome in the 8th century BCE and grew to become one of the largest empires in history.",
-        "Explanation": "The Roman Empire was known for its advanced engineering, architecture, law, and military prowess, and it had a significant influence on the development of Western civilization."
+        "Question": "Who was Albert Einstein?",
+        "Answer": "Albert Einstein was a theoretical physicist.",
+        "Explanation": "Albert Einstein was a renowned scientist known for developing the theory of relativity and making significant contributions to the understanding of quantum mechanics."
     }
 ]
 
-Multiple Choice:
-```json
 [
     {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD, and its territories were divided and eventually conquered by
-
-Multiple Choice:
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD with the fall of the Western Roman Empire. It has not existed
-
-Multiple Choice:
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD, after the fall of the Western Roman Empire. It has not
-
-Multiple Choice:
-```json
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD, and its territories were divided and eventually conquered by
-
-Multiple Choice:
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD with the fall of the Western Roman Empire. It has not existed
-
-Multiple Choice:
-```json
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD with the fall of the Western Roman Empire."
-   
-
-Multiple Choice:
-[
-    {
-        "Question": "Which city was the capital of the Roman Empire?",
-        "Options": ["Athens", "Rome", "Alexandria", "Carthage"],
-        "Answer": "Rome",
-        "Explanation": "Rome was the capital of the Roman Empire, and it played a central role in the empire's governance, culture, and history."
-    }
-]
-
-Multiple Choice:
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD with the fall of the Western Roman Empire. It has not existed
-
-Multiple Choice:
-```json
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD, and there is no continuation of it in the
-
-Multiple Choice:
-```json
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD, after the fall of the Western Roman Empire."
-
-
-Short Answer
-[
-    {
-        "Question": "What was the Roman Empire?",
-        "Answer": "The Roman Empire was a powerful ancient civilization that emerged from the city of Rome in the 3rd century BC and lasted for over a millennium.",
-        "Explanation": "The Roman Empire was known for its advanced architecture, engineering, law, and military prowess, and it greatly influenced Western civilization."
-    }
-]
-
-Multiple Choice:
-[
-    {
-        "Question": "Who was the first emperor of the Roman Empire?",
-        "Options": ["Julius Caesar", "Augustus", "Nero", "Constantine"],
-        "Answer": "Augustus",
-        "Explanation": "Augustus, originally named Octavian, became the first emperor of the Roman Empire after the defeat of Mark Antony and Cleopatra at the Battle of Actium in 31 BC. He ruled from 27 BC until his death in AD 14."
-    }
-]
-
-Multiple Choice:
-```json
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD with the fall of the Western Roman Empire."
-   
-
-Multiple Choice:
-```json
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD, and there is no continuation of it in the
-
-Multiple Choice:
-```json
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD, and there is no continuation of it in the
-
-Multiple Choice:
-```json
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD with the fall of the Western Roman Empire."
-   
-
-Multiple Choice:
-```json
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD, after the fall of the Western Roman Empire."
-
-
-Multiple Choice:
-```json
-[
-    {
-        "Question": "The Roman Empire still exists today",
-        "Answer": "False",
-        "Explanation": "The Roman Empire ceased to exist in 476 AD, and its territories were divided and eventually conquered by
-
-Multiple Choice:
-[
-    {
-        "Question": "Who was the first Roman Emperor?",
-        "Options": ["Julius Caesar", "Augustus", "Nero", "Constantine"],
-        "Answer": "Augustus",
-        "Explanation": "Augustus, originally named Octavian, became the first Roman Emperor after defeating Mark Antony and Cleopatra in the Battle of Actium in 31 BC. He ruled from 27 BC until his death in AD 14."
-    }
-]
-
-Short Answer
-[
-    {
-        "Question": "What was the Roman Empire?",
-        "Answer": "The Roman Empire was a powerful and vast civilization that existed from 27 BC to 476 AD.",
-        "Explanation": "It was known for its advanced architecture, engineering, law, and military prowess, and it greatly influenced Western civilization."
-    }
-]
-
-Multiple Choice:
-[
-    {
-        "Question": "Who was the first emperor of the Roman Empire?",
-        "Options": ["Julius Caesar", "Augustus", "Nero", "Constantine"],
-        "Answer": "Augustus",
-        "Explanation": "Augustus, originally named Octavian, became the first Roman Emperor after defeating Mark Antony and Cleopatra in the Battle of Actium in 31 BC. He ruled from 27 BC until his death in AD 14."
-    }
-]
-
-Short Answer
-[
-    {
-        "Question": "What was the Roman Empire?",
-        "Answer": "The Roman Empire was a powerful and vast civilization that existed from 27 BC to 476 AD.",
-        "Explanation": "It was known for its advanced architecture, engineering, and legal system, and it greatly influenced Western civilization."
-    }
-]
-
-Short Answer
-[
-    {
-        "Question": "What was the Roman Empire?",
-        "Answer": "The Roman Empire was a powerful ancient civilization that emerged from the city of Rome in the 8th century BCE and grew to become one of the largest empires in history.",
-        "Explanation": "The Roman Empire was known for its advanced engineering, governance, and military prowess, and it had a lasting influence on Western civilization."
+        "Question": "What is Albert Einstein best known for?",
+        "Options": ["Theory of Relativity", "Invention of the Light Bulb", "Discovery of Penicillin", "Creation of the Internet"],
+        "Answer": "Theory of Relativity",
+        "Explanation": "Albert Einstein is best known for his theory of relativity, which revolutionized our understanding of space, time, and gravity."
     }
 ]
 

@@ -29,16 +29,14 @@ class RequestHandler:
         t2.start()
         t3.start()
         
-        t1.join()
-        t2.join()
-        t3.join()
+        # t1.join()
+        # t2.join()
+        # t3.join()
         
         return {'generated_questions': generated_questions}, 200
 
     def check_short_answer(self, client_data) -> dict:
         pass
-
-
 
     def run_server(self):
         @self.app.route("/members", methods=["POST"])

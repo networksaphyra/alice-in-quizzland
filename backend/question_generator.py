@@ -13,7 +13,6 @@ class QuestionGenerator:
 
     def _extract_multiple_choice_data(self, response):
         filtered_response = response.choices[0].message.content
-        log("Multiple Choice:")
         log(filtered_response + "\n")
         try: 
             data_dict = json.loads(filtered_response)
@@ -37,12 +36,11 @@ class QuestionGenerator:
             successful = self._extract_multiple_choice_data(response)
             if successful:
                 break
-            generated_questions.append(generated_questions)
+            generated_questions.append(successful)
         
 
     def _extract_short_answer_data(self, response):
         filtered_response = response.choices[0].message.content
-        log("Short Answer")
         log(filtered_response + "\n")
 
         try: 
@@ -72,7 +70,6 @@ class QuestionGenerator:
 
     def _extract_true_or_false_data(self, response):
         filtered_response = response.choices[0].message.content
-        log("True or False")
         log(filtered_response + "\n")
         try:
             data_dict = json.loads(filtered_response)
@@ -98,8 +95,9 @@ class QuestionGenerator:
                 break
         generated_questions.append(successful)
     
+
 if __name__ == "__main__":
-    topic = "The Roman Empire"
+    topic = "Albert Einstein"
     generated_questions = []
     question_generator = QuestionGenerator()
     
@@ -112,8 +110,6 @@ if __name__ == "__main__":
     t2.start()
     t3.start()
     
-    t1.join()
-    t2.join()
-    t3.join()
-
-    print(generated_questions)
+    # t1.join()
+    # t2.join()
+    # t3.join()
