@@ -2,6 +2,7 @@ from flask import Flask, request
 from question_generator import QuestionGenerator
 import ai_config
 import openai
+import threading
 
 class RequestHandler:
     def __init__(self):
@@ -20,27 +21,36 @@ class RequestHandler:
         ai_config.TRUE_OR_FALSE_QUESTION_NUM = true_or_false_num
 
         generated_questions = []
-        generated_questions.append(self.question_generator.generate_multiple_choice_question(topic))
-        generated_questions.append(self.question_generator.generate_short_answer_question(topic))
-        generated_questions.append(self.question_generator.generate_true_or_false_question(topic))
+        t1 = threading.Thread(target=self.question_generator.generate_multiple_choice_question, args=(topic, generated_questions))
+        t2 = threading.Thread(target=self.question_generator.generate_short_answer_question, args=(topic, generated_questions))
+        t3 = threading.Thread(target=self.question_generator.generate_true_or_false_question, args=(topic, generated_questions))
+
+        t1.start()
+        t2.start()
+        t3.start()
+        
+        t1.join()
+        t2.join()
+        t3.join()
         
         return {'generated_questions': generated_questions}, 200
 
     def check_short_answer(self, client_data) -> dict:
         pass
 
-    def handle_requests(self) -> dict:
-        client_data = request.json
-        if client_data["check"]:
-            return self.check_short_answer(client_data=client_data)
-        else:
-            return self.send_generated_questions(client_data=client_data)
+
 
     def run_server(self):
         @self.app.route("/members", methods=["POST"])
         def handle_requests_wrapper():
-            return self.handle_requests()
+            client_data = request.json
+            return self.send_generated_questions(client_data=client_data)
 
+        @self.app.route("/check", methods=["POST"])
+        def handle_requests(self) -> dict:
+            client_data = request.json
+            return self.check_short_answer(client_data=client_data)
+                
         self.app.run(debug=True)
 
 if __name__ == '__main__':

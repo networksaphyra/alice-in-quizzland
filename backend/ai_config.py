@@ -13,7 +13,7 @@ MULITPLE_CHOICE_SYSTEM_BEHAVIOR_PROMPT=f"""
     [
     {{
         "Question": "The question",
-        "Options": {"Option A", "Option B", "Option C", "Option D"},
+        "Options": ["Option A", "Option B", "Option C", "Option D"],
         "Answer": "Correct option for the question",
         "Explanation": "A brief explanation for the answer for this question",
     }},

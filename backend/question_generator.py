@@ -2,12 +2,18 @@ import openai
 import json
 import ai_config
 
+def log(statement):
+    with open("log.log", "a") as file:
+        file.write(statement + "\n")
+
 class QuestionGenerator:
     def __init__(self) -> None:
         self.client = openai.OpenAI(api_key=ai_config.API_KEY)
 
     def _extract_multiple_choice_data(self, response):
         filtered_response = response.choices[0].message.content
+        log("Multiple Choice:")
+        log(filtered_response + "\n")
         try: 
             data_dict = json.loads(filtered_response)
         except json.JSONDecodeError:
@@ -15,7 +21,7 @@ class QuestionGenerator:
             return None
         return data_dict
 
-    def generate_multiple_choice_question(self, topic_query: str):
+    def generate_multiple_choice_question(self, topic_query: str, generated_questions):
         messages = [
             {"role": "system", "content": ai_config.MULITPLE_CHOICE_SYSTEM_BEHAVIOR_PROMPT},
             {"role": "user", "content": topic_query}
@@ -25,11 +31,14 @@ class QuestionGenerator:
             messages = messages,
             temperature = ai_config.MULTIPLE_CHOICE_TEMPERATURE,
             max_tokens = ai_config.MULTIPLE_CHOICE_MAX_TOKENS
-        ) 
-        return self._extract_multiple_choice_data(response)
+        )
+        generated_questions.append(self._extract_multiple_choice_data(response))
 
     def _extract_short_answer_data(self, response):
         filtered_response = response.choices[0].message.content
+        log("Short Answer")
+        log(filtered_response + "\n")
+
         try: 
             data_dict = json.loads(filtered_response)
         except json.JSONDecodeError:
@@ -37,7 +46,7 @@ class QuestionGenerator:
             return None
         return data_dict
      
-    def generate_short_answer_question(self, topic_query: str):
+    def generate_short_answer_question(self, topic_query: str, generated_questions):
         while True:
             messages = [
                 {"role": "system", "content": ai_config.SHORT_ANSWER_SYSTEM_BEHAVIOR_PROMPT},
@@ -49,14 +58,16 @@ class QuestionGenerator:
                 temperature = ai_config.SHORT_ANSWER_TEMPERATURE,
                 max_tokens = ai_config.SHORT_ANSWER_MAX_TOKENS
             ) 
-            sucessful = self._extract_short_answer_data(response)
-            if (sucessful): 
+            successful = self._extract_short_answer_data(response)
+            if (successful): 
                 break
-        return sucessful
+        generated_questions.append(successful)
 
 
     def _extract_true_or_false_data(self, response):
         filtered_response = response.choices[0].message.content
+        log("True or False")
+        log(filtered_response + "\n")
         try:
             data_dict = json.loads(filtered_response)
         except json.JSONDecodeError:
@@ -64,7 +75,7 @@ class QuestionGenerator:
             return None
         return data_dict
      
-    def generate_true_or_false_question(self, topic_query: str):
+    def generate_true_or_false_question(self, topic_query: str, generated_questions):
         while True:
             messages = [
                 {"role": "system", "content": ai_config.TRUE_OR_FALSE_SYSTEM_BEHAVIOR_PROMPT},
@@ -79,7 +90,7 @@ class QuestionGenerator:
             successful = self._extract_multiple_choice_data(response)
             if successful:
                 break
-        return successful
+        generated_questions.append(successful)
     
 if __name__ == "__main__":
     generator = QuestionGenerator()
