@@ -38,7 +38,7 @@ class RequestHandler:
         @self.app.route("/check", methods=["POST"])
         def handle_requests():
             client_data = request.json
-            return self.question_generator.confirmation_short_answer(client_data)
+            return {'confirmatioon': self.question_generator.confirmation_short_answer(client_data)}, 200
 
         self.app.run(debug=True)
 

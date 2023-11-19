@@ -18,7 +18,6 @@ class QuestionGenerator:
         if filtered_response.endswith("```"):
             filtered_response = filtered_response[:-3]
         log(filtered_response + "\n")
-        log(filtered_response + "\n")
         try: 
             data_dict = json.loads(filtered_response)
         except json.JSONDecodeError:
