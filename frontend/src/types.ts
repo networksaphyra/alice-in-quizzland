@@ -29,10 +29,9 @@ export type QuizStats = {
     quiz: Quiz
     correctMultipleChoice: any
     correctTrueOrFalse: any
-    correctRate: number
+    correctShortAnswers: any
 }
 
 export type Store = {
-    quizzes: [Quiz]
-
+    quizzes: QuizStats[]
 }
