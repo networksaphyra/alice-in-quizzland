@@ -7,6 +7,7 @@ import { VolumeDown, VolumeUp } from "@material-ui/icons";
 import axios from 'axios';
 import { LongAnswer, MultipleChoice, Quiz, TrueOrFalse } from "../types";
 import { QuizForm } from "./QuizForm";
+import "../Form.css"
 
 export const UserForm = () => {
     const nameRef = useRef<HTMLTextAreaElement | null>(null);
@@ -112,27 +113,31 @@ export const UserForm = () => {
 
 
     return (quiz ? <QuizForm quiz={quiz} correctmultiplechoice={correctMultipleChoice} correcttrueorfalse={correctTrueOrFalse} correctshortanswer={correctShortAnswer}/>
-        : <>
+        : <div className="quiz-form-container">
         <h2>Make a New Quiz:</h2>
-        <FormControl sx={{width: "100%"}}>
-        <Textarea placeholder="Quiz Name" slotProps={{ textarea: { ref: nameRef } }} sx={{background: "#23272f", color: "#ebecf0"}}/>
-        <LargeTextBox ref={studyNotesRef}/>
-        <Textarea placeholder="Num of Questions" slotProps={{ textarea: { ref: numQuestionsRef } }} sx={{background: "#23272f", color: "#ebecf0"}}/>
-        <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-          <label>Multiple Choice:</label>
-          <Slider sx={{width: "30%"}} aria-label="multipleChoice" value={multipleChoice} onChange={(e, newNum) => {setMultipleChoice(newNum as number)}} />
-          </Stack>
-        <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-          <label>Short Answer:</label>
-          <Slider sx={{width: "30%"}} aria-label="shortAnswer" value={shortAnswer} onChange={(e, newNum) => {setShortAnswer(newNum as number)}} />
-          </Stack>
-        <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-          <label>True or False:</label>
-          <Slider sx={{width: "30%"}} aria-label="trueOrFalse" value={trueOrFalse} onChange={(e, newNum) => {setTrueOrFalse(newNum as number)}} />
-          </Stack>
-        <Button onClick={submitData} sx={{ ml: 'auto' }}>Submit</Button>
+        <FormControl>
+            <Textarea placeholder="Quiz Name" slotProps={{ textarea: { ref: nameRef } }}/>
+            <Textarea placeholder="Quiz Topic / Study Notes" slotProps={{ textarea: { ref: studyNotesRef } }} />
+            <Textarea placeholder="Num of Questions" slotProps={{ textarea: { ref: numQuestionsRef } }} />
+
+            <Stack spacing={2} direction="row" alignItems="center">
+                <label>Multiple Choice:</label>
+                <Slider aria-label="multipleChoice" value={multipleChoice} onChange={(e, newNum) => { setMultipleChoice(newNum as number) }} />
+            </Stack>
+
+            <Stack spacing={2} direction="row" alignItems="center">
+                <label>Short Answer:</label>
+                <Slider aria-label="shortAnswer" value={shortAnswer} onChange={(e, newNum) => { setShortAnswer(newNum as number) }} />
+            </Stack>
+
+            <Stack spacing={2} direction="row" alignItems="center">
+                <label>True or False:</label>
+                <Slider aria-label="trueOrFalse" value={trueOrFalse} onChange={(e, newNum) => { setTrueOrFalse(newNum as number) }} />
+            </Stack>
+
+            <Button onClick={submitData} >Submit</Button>
         </FormControl>
-        </>
+    </div>
     );
     
 }

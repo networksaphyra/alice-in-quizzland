@@ -1,18 +1,19 @@
 import { Button } from '@mui/joy'
-import { Link } from 'react-router-dom'
-import '../Home.css';
+import { Link,  } from 'react-router-dom'
+import '../Home.css'; // Make sure the correct path to the CSS file is here
+import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
+    const history = useNavigate();
     return (
-        <div className='Home'>
-            <header>
-                <h1>Welcome to the Wonderland of Quizzes!</h1>
-            </header>
-            <img className="logo" src="/logo.png" alt="logo" />
-            <h2>Spend Less Time Finding Questions.</h2>
-            <Link to="/quiz">
-                <Button className="start">Click To Knock!</Button>
-            </Link>
+        <div className="container">
+            <h1 className="title">Alice in Quizzland</h1>
+            <button className="knock-button" onClick={() => history("/quiz")} >Knock to go in</button>
+            <div className="rabbit rabbit-left"></div>
+            <div className="rabbit rabbit-right"></div>
+            <audio autoPlay loop>
+                <source src="bgm.mp3" type="audio/mpeg" />
+            </audio>
         </div>
     );
 }
