@@ -2,7 +2,7 @@ from flask import Flask, request
 from question_generator import QuestionGenerator
 import ai_config
 import openai
-import threading
+import asyncio
 
 class RequestHandler:
     def __init__(self):
@@ -10,7 +10,7 @@ class RequestHandler:
         openai.api_key = ai_config.API_KEY
         self.question_generator = QuestionGenerator()
 
-    def send_generated_questions(self, client_data) -> dict:
+    async def send_generated_questions(self, client_data) -> dict:
         topic = client_data["topic"]
         multiple_choice_num = client_data["multipleChoice"]
         short_answer_num = client_data["shortAnswer"]
@@ -21,34 +21,32 @@ class RequestHandler:
         ai_config.TRUE_OR_FALSE_QUESTION_NUM = true_or_false_num
 
         generated_questions = []
-        t1 = threading.Thread(target=self.question_generator.generate_multiple_choice_question, args=(topic, generated_questions))
-        t2 = threading.Thread(target=self.question_generator.generate_short_answer_question, args=(topic, generated_questions))
-        t3 = threading.Thread(target=self.question_generator.generate_true_or_false_question, args=(topic, generated_questions))
 
-        t1.start()
-        t2.start()
-        t3.start()
-        
-        # t1.join()
-        # t2.join()
-        # t3.join()
-        
+        # Using asyncio.gather to run multiple coroutines concurrently
+        await asyncio.gather(
+            self.question_generator.generate_multiple_choice_question(topic, generated_questions),
+            self.question_generator.generate_short_answer_question(topic, generated_questions),
+            self.question_generator.generate_true_or_false_question(topic, generated_questions)
+        )
+
         return {'generated_questions': generated_questions}, 200
 
-    def check_short_answer(self, client_data) -> dict:
+    async def check_short_answer(self, client_data) -> dict:
         pass
 
     def run_server(self):
         @self.app.route("/members", methods=["POST"])
         def handle_requests_wrapper():
             client_data = request.json
-            return self.send_generated_questions(client_data=client_data)
+            # Using asyncio.run to run the async method in the event loop
+            return asyncio.run(self.send_generated_questions(client_data=client_data))
 
         @self.app.route("/check", methods=["POST"])
-        def handle_requests(self) -> dict:
+        def handle_requests():
             client_data = request.json
-            return self.check_short_answer(client_data=client_data)
-                
+            # Using asyncio.run to run the async method in the event loop
+            return asyncio.run(self.check_short_answer(client_data=client_data))
+
         self.app.run(debug=True)
 
 if __name__ == '__main__':
