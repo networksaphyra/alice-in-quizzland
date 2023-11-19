@@ -3,21 +3,18 @@ export type MultipleChoice = {
     options: string[];
     answer: string;
     explanation: string;
-    correctRate: number;
 }
 
 export type LongAnswer = {
     question: string
     answer: string
     explanation: string
-    correctRate: number
 }
 
 export type TrueOrFalse = {
     question: string
     answer: string
     explanation: string
-    correctRate: number
 }
 
 export type Quiz = {
@@ -25,8 +22,14 @@ export type Quiz = {
     multipleChoice: MultipleChoice[]
     longAnswer: LongAnswer[]
     trueOrFalse: TrueOrFalse[]
-    correctRate: number
     numQuestions: number
+}
+
+export type QuizStats = {
+    quiz: Quiz
+    correctMultipleChoice: any
+    correctTrueOrFalse: any
+    correctRate: number
 }
 
 export type Store = {
