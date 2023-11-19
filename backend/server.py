@@ -23,9 +23,9 @@ class RequestHandler:
         generated_questions = []
 
         tasks = [
-            self.question_generator.generate_multiple_choice_question(topic, generated_questions),
-            self.question_generator.generate_short_answer_question(topic, generated_questions),
-            self.question_generator.generate_true_or_false_question(topic, generated_questions)
+            generated_questions.append(self.question_generator.generate_multiple_choice_question(topic)),
+            generated_questions.append(self.question_generator.generate_short_answer_question(topic)),
+            generated_questions.append(self.question_generator.generate_true_or_false_question(topic))
         ]
 
         await asyncio.gather(*tasks)

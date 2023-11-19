@@ -26,7 +26,7 @@ class QuestionGenerator:
                 {"role": "system", "content": ai_config.MULITPLE_CHOICE_SYSTEM_BEHAVIOR_PROMPT},
                 {"role": "user", "content": topic_query}
             ]
-            response = await self.client.chat.completions.create(
+            response = self.client.chat.completions.create(
                 model=ai_config.MODEL,
                 messages=messages,
                 temperature=ai_config.MULTIPLE_CHOICE_TEMPERATURE,
