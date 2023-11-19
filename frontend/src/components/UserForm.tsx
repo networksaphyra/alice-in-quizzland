@@ -16,19 +16,16 @@ export const UserForm = () => {
 
     const submitData = () => {
       const total = multipleChoice + shortAnswer + trueOrFalse;
-      setMultipleChoice(Math.round((multipleChoice / total) * Number(numQuestionsRef)))
-      setShortAnswer(Math.round((shortAnswer / total) * Number(numQuestionsRef)))
-      setTrueOrFalse(Math.round((trueOrFalse / total) * Number(numQuestionsRef)))
-      
-      console.log(multipleChoice, shortAnswer, trueOrFalse)
 
-      axios.get('/members', {
-        params: {
-          topic: studyNotesRef,
-          multipleChoice: multipleChoice,
-          shortAnswer: shortAnswer,
-          trueOrFalse: trueOrFalse
-        }
+      axios.post('/members',{
+          topic: studyNotesRef.current?.value,
+          multipleChoice: Math.round((multipleChoice / total) * Number(numQuestionsRef.current?.value)),
+          shortAnswer: Math.round((shortAnswer / total) * Number(numQuestionsRef.current?.value)),
+          trueOrFalse: Math.round((trueOrFalse / total) * Number(numQuestionsRef.current?.value))
+        }, {
+          headers: {
+              'Content-Type': 'application/json',
+          }
       })
       .then(function (response) {
         console.log(response);
