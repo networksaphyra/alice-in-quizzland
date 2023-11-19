@@ -40,12 +40,12 @@ class RequestHandler:
 
     def run_server(self):
         @self.app.route("/members", methods=["POST"])
-        def handle_requests_wrapper():
+        def handle_requests():
             client_data = request.json
             return self.send_generated_questions(client_data=client_data)
 
         @self.app.route("/check", methods=["POST"])
-        def handle_requests(self) -> dict:
+        def handle_short_answers(self) -> dict:
             client_data = request.json
             return self.check_short_answer(client_data=client_data)
                 
