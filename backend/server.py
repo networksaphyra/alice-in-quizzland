@@ -19,10 +19,8 @@ class RequestHandler:
         ai_config.MULTIPLE_CHOICE_QUESTION_NUM = multiple_choice_num
         ai_config.SHORT_ANSWER_QUESTION_NUM = short_answer_num
         ai_config.TRUE_OR_FALSE_QUESTION_NUM = true_or_false_num
-
-        generated_questions = []
-
-        await asyncio.gather(
+        
+        generated_questions = await asyncio.gather(
             self.question_generator.generate_multiple_choice_question(topic),
             self.question_generator.generate_short_answer_question(topic),
             self.question_generator.generate_true_or_false_question(topic)

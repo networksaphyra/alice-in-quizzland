@@ -41,6 +41,10 @@ class QuestionGenerator:
 
     def _extract_short_answer_data(self, response):
         filtered_response = response.choices[0].message.content
+        if filtered_response.startswith("```json"):
+            filtered_response = filtered_response[7:]
+        if filtered_response.endswith("```"):
+            filtered_response = filtered_response[:-3]
         log(filtered_response + "\n")
 
         try: 
@@ -70,6 +74,10 @@ class QuestionGenerator:
 
     def _extract_true_or_false_data(self, response):
         filtered_response = response.choices[0].message.content
+        if filtered_response.startswith("```json"):
+            filtered_response = filtered_response[7:]
+        if filtered_response.endswith("```"):
+            filtered_response = filtered_response[:-3]
         log(filtered_response + "\n")
         try:
             data_dict = json.loads(filtered_response)
@@ -97,6 +105,10 @@ class QuestionGenerator:
 
     def _extract_confirmation_short_answer_data(self, response):
         filtered_response = response.choices[0].message.content
+        if filtered_response.startswith("```json"):
+            filtered_response = filtered_response[7:]
+        if filtered_response.endswith("```"):
+            filtered_response = filtered_response[:-3]
         log(filtered_response + "\n")
         try: 
             data_dict = json.loads(filtered_response)
