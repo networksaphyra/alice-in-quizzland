@@ -38,11 +38,11 @@ export const QuizForm = (props : any) : any => {
 
     return (
         <div className="quiz-form-container">
-            {props.quiz.multipleChoice.length !== 0 && <p>Multiple Choice Section:</p>}
+            {props.quiz.multipleChoice.length !== 0 && <p className="subheading">Multiple Choice Section:</p>}
             {props.quiz.multipleChoice.map((question: any, index: any) => (
                 <div key={index}>
                     <p>{index + 1}. {question.question}</p>
-                    <Select
+                    <Select className="select-box"
                         onChange={(e) => {
                             let stateCopy = { ...correctMultipleChoice };
                             stateCopy[index] = e.target.value === question.answer;
@@ -55,7 +55,7 @@ export const QuizForm = (props : any) : any => {
                     </Select>
                 </div>
             ))}
-            {props.quiz.longAnswer.length !== 0 && <p>Short Answer Section:</p>}
+            {props.quiz.longAnswer.length !== 0 && <p className="subheading">Short Answer Section:</p>}
             {props.quiz.longAnswer.map((question: any, index: any) => (
                 <div key={index}>
                     <p>{index + 1}. {question.question}</p>
@@ -70,11 +70,11 @@ export const QuizForm = (props : any) : any => {
                     />
                 </div>
             ))}
-            {props.quiz.trueOrFalse.length !== 0 && <p>True or False Section:</p>}
+            {props.quiz.trueOrFalse.length !== 0 && <p className="subheading">True or False Section:</p>}
             {props.quiz.trueOrFalse.map((question: any, index: any) => (
                 <div key={index}>
                     <p>{index + 1}. {question.question}</p>
-                    <Select
+                    <Select className="select-box"
                         onChange={(e) => {
                             let stateCopy = { ...correctTrueOrFalse };
                             stateCopy[index] = e.target.value === question.answer;
@@ -86,6 +86,6 @@ export const QuizForm = (props : any) : any => {
                     </Select>
                 </div>
             ))}
-            <Button onClick={submitQuiz} >Submit</Button>
+            <Button className="submit-button" onClick={submitQuiz} >Submit</Button>
             </div>)
 }

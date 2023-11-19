@@ -1,5 +1,5 @@
 .quiz-form-container {
-    width: 80%;
+    width: 100%;
     margin: 20px auto;
     padding: 20px;
     background: linear-gradient(120deg, #ff6b6b, #6b6bff);
@@ -16,6 +16,69 @@ p {
     margin-bottom: 10px;
 }
 
+/* Darker Modern Subheading with Subtle Animation */
+.subheading {
+    font-size: 2rem; /* Adjust size according to your preference */
+    text-align: center;
+    color: #2c3e50; /* Deeper, darker color - adjust as needed */
+    margin-bottom: 20px; /* Add space between elements */
+    font-family: 'Roboto', sans-serif; /* Adjust font family */
+    /* Add any other styles you desire */
+    animation: subtleGlow 2s ease-in-out infinite alternate; /* Subtle glowing animation */
+}
+
+/* Subtle Glowing Animation Keyframes */
+@keyframes subtleGlow {
+    0% {
+        text-shadow: none; /* No glow at the start */
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(44, 62, 80, 0.8), 0 0 10px rgba(44, 62, 80, 0.8), 0 0 15px rgba(44, 62, 80, 0.8); /* Subtle glow effect */
+    }
+}
+
+/* Improved Select Box Styles */
+.select-box {
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Spacing between select boxes */
+    display: flex;
+    justify-content: center; /* Centering the select box */
+}
+
+/* Styling the Select Element */
+.select-box select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Adjust padding for better appearance */
+    font-size: 1rem; /* Adjust font size */
+    border: 2px solid #2c3e50; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f0f0f0; /* Background color */
+    color: #333; /* Text color */
+    appearance: none; /* Remove default appearance */
+    /* Add any other styles you desire */
+}
+
+/* Enhanced Submit Button Styles */
+.submit-button {
+    padding: 15px 25px; /* Increased padding for a larger button */
+    font-size: 1.2rem; /* Slightly increased font size */
+    border: none;
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer;
+    background-color: #ff6b6b;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto; /* Adjusts position to the right */
+    margin-top: 30px; /* Increased space from the elements above */
+    display: inline-block; /* Ensures button takes up only its content width */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.submit-button:hover {
+    background-color: #6b6bff;
+}
+
 Select,
 Textarea {
     width: 100%;
@@ -25,20 +88,4 @@ Textarea {
     border: none;
     border-radius: 5px;
     padding: 10px;
-}
-
-Button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #ff6b6b;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: auto;
-}
-
-Button:hover {
-    background-color: #6b6bff;
 }
