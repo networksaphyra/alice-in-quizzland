@@ -12,6 +12,7 @@ def get_preferences() -> dict:
     client_data = request.json
     topic = client_data["topic"]
     multiple_choices_num, short_answer_num, true_or_false_num = client_data["multipleChoice"], client_data["shortAnswer"], client_data["trueOrFalse"]
+    ai_config.MULTIPLE_CHOICE_QUESTION_NUM, ai_config.SHORT_ANSWER_QUESTION_NUM, ai_config.TRUE_OR_FALSE_QUESTION_NUM = multiple_choices_num, short_answer_num, true_or_false_num
     print(multiple_choices_num, short_answer_num, true_or_false_num)
     generated_questions = []
 
