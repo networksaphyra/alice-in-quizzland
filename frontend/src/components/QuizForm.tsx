@@ -11,7 +11,7 @@ export const QuizForm = (props : any) : any => {
     const [correctTrueOrFalse, setCorrectTrueOrFalse] = useState<any>(props.correcttrueorfalse)
     const [shortAnswer, setShortAnswer] = useState<any>(props.correctshortanswer)
     const history = useNavigate();
-
+    let quizzes = store.use.quizzes();
     const submitQuiz = async (e: any) => {
         let correctShortAnswers : any = {};
         for (let i = 0; i < Object.keys(shortAnswer).length; i++) {
@@ -26,7 +26,7 @@ export const QuizForm = (props : any) : any => {
         }).then(response => {correctShortAnswers[i] = response.data.confirmation[0].Confirmation})
         console.log(correctShortAnswers)
         }
-        store.use.quizzes().push({
+        quizzes.push({
             quiz: props.quiz,
             correctTrueOrFalse: correctTrueOrFalse,
             correctMultipleChoice: correctMultipleChoice,
