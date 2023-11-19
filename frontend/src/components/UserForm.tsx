@@ -45,7 +45,11 @@ export const UserForm = () => {
       })
     };
 
-    return (<>
+    return (quiz ? 
+        <>
+          quiz.map();
+        </>
+        : <>
         <h2>Make a New Quiz:</h2>
         <FormControl sx={{width: "100%"}}>
         <Textarea placeholder="Quiz Name" slotProps={{ textarea: { ref: nameRef } }} sx={{background: "#23272f", color: "#ebecf0"}}/>
