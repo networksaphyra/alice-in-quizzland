@@ -197,3 +197,642 @@
 ]
 ```
 
+[
+    {
+        "Question": "What is the primary method of heat transfer in a vacuum?",
+        "Options": ["Conduction", "Convection", "Radiation", "Advection"],
+        "Answer": "Radiation",
+        "Explanation": "In a vacuum, where there is no medium for conduction or convection, heat is primarily transferred through electromagnetic radiation."
+    },
+    {
+        "Question": "What is the specific heat capacity of water?",
+        "Options": ["1.0 J/g°C", "4.18 J/g°C", "2.0 J/g°C", "3.0 J/g°C"],
+        "Answer": "4.18 J/g°C",
+        "Explanation": "Water has a high specific heat capacity of 4.18 J/g°C, which means it can absorb or release a large amount of heat with minimal temperature change."
+    },
+    {
+        "Question": "What is the first law of thermodynamics also known as?",
+        "Options": ["Law of Conservation of Energy", "Law of Entropy", "Law of Heat Transfer", "Law of Thermodynamic Equilibrium"],
+        "Answer": "Law of Conservation of Energy",
+        "Explanation": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another, also known as the Law of Conservation of Energy."
+    }
+]
+
+[
+    {
+        "Question": "What is thermal physics?",
+        "Answer": "Thermal physics is the study of the behavior of systems and materials at various temperatures.",
+        "Explanation": "It explores the principles of thermodynamics, heat transfer, and the properties of matter at the microscopic level."
+    },
+    {
+        "Question": "What are the key concepts of thermal physics?",
+        "Answer": "Key concepts include temperature, heat, energy transfer, thermal equilibrium, and the laws of thermodynamics.",
+        "Explanation": "These concepts help in understanding how thermal energy is exchanged and how it affects the properties of matter."
+    },
+    {
+        "Question": "How is thermal physics applied in real life?",
+        "Answer": "Thermal physics is applied in various fields such as engineering, meteorology, environmental science, and materials science.",
+        "Explanation": "It helps in designing efficient heating and cooling systems, understanding climate patterns, and developing new materials with specific thermal properties."
+    }
+]
+
+```json
+[
+    {
+        "Question": "Heat always flows from a colder object to a hotter object.",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    },
+    {
+        "Question": "Temperature and heat are the same thing.",
+        "Answer": "False",
+        "Explanation": "Temperature is a measure of the average kinetic energy of the particles in a substance, while heat is the transfer of energy between substances due to a temperature difference."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature that can be reached.",
+        "Answer": "True",
+        "Explanation": "Absolute zero, at 0 Kelvin or -273.15 degrees Celsius, is the lowest temperature theoretically achievable, at which the motion of particles ceases."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Temperature is a measure of the average kinetic energy of the particles in a substance.",
+        "Answer": "True",
+        "Explanation": "Temperature is indeed a measure of the average kinetic energy of the particles in a substance, as defined by the kinetic theory of gases."
+    },
+    {
+        "Question": "Heat and temperature are the same thing.",
+        "Answer": "False",
+        "Explanation": "Heat and temperature are not the same thing. Temperature is a measure of the average kinetic energy of particles, while heat is the transfer of energy from one substance to another due to a temperature difference."
+    },
+    {
+        "Question": "The second law of thermodynamics states that heat flows spontaneously from a colder body to a hotter body.",
+        "Answer": "False",
+        "Explanation": "The second law of thermodynamics states that heat does not flow spontaneously from a colder body to a hotter body. Instead, it flows from a hotter body to a colder body."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Heat always flows from a colder object to a hotter object.",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    },
+    {
+        "Question": "Temperature and heat are the same thing.",
+        "Answer": "False",
+        "Explanation": "Temperature is a measure of the average kinetic energy of the particles in a substance, while heat is the transfer of energy between substances due to a temperature difference."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature that can be reached.",
+        "Answer": "True",
+        "Explanation": "Absolute zero, at 0 Kelvin or -273.15 degrees Celsius, is the lowest temperature theoretically achievable, at which the motion of particles ceases."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Entropy in a closed system can decrease over time.",
+        "Answer": "False",
+        "Explanation": "The second law of thermodynamics states that the entropy of a closed system tends to increase over time, leading to the concept of irreversibility in natural processes."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature where all molecular motion ceases.",
+        "Answer": "True",
+        "Explanation": "At absolute zero, the thermal motion of particles reaches a minimum, and it is the point at which the entropy of a perfect crystal is zero."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Heat always flows from a colder object to a hotter object.",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature where all molecular motion ceases.",
+        "Answer": "True",
+        "Explanation": "At absolute zero, the entropy of a perfect crystal is exactly zero, and there is no thermal motion."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is true according to the first law of thermodynamics, which is also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Temperature is a measure of the total energy of a substance.",
+        "Answer": "False",
+        "Explanation": "Temperature is a measure of the average kinetic energy of the particles in a substance, not the total energy."
+    },
+    {
+        "Question": "Heat always flows from a colder object to a hotter object.",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Entropy in a closed system can decrease over time.",
+        "Answer": "False",
+        "Explanation": "The second law of thermodynamics states that the entropy of a closed system tends to increase over time, leading to the concept of irreversibility in natural processes."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature, at which the entropy of a perfect crystal is exactly zero.",
+        "Answer": "True",
+        "Explanation": "This is a key concept in thermal physics, as it represents the point at which the motion of particles ceases and the system reaches its minimum energy state."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Heat always flows from a hotter object to a colder object.",
+        "Answer": "True",
+        "Explanation": "This is a basic principle of thermodynamics, as heat naturally moves to equalize temperatures."
+    },
+    {
+        "Question": "The second law of thermodynamics states that it is impossible to convert heat completely into work with 100% efficiency.",
+        "Answer": "True",
+        "Explanation": "This law is a fundamental principle in thermal physics, indicating that some energy will always be lost as heat in any energy conversion process."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Entropy in a closed system can decrease over time.",
+        "Answer": "False",
+        "Explanation": "The second law of thermodynamics states that the entropy of a closed system tends to increase over time, leading to the concept of the arrow of time."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature, at which the entropy of a perfect crystal is zero.",
+        "Answer": "True",
+        "Explanation": "This is a key concept in thermal physics, and it is the point at which the motion of particles theoretically ceases."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Heat always flows from a hotter object to a colder object",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle of thermal physics known as the second law of thermodynamics."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature",
+        "Answer": "True",
+        "Explanation": "According to the third law of thermodynamics, absolute zero is the lowest temperature that is theoretically possible."
+    },
+    {
+        "Question": "Temperature and heat are the same thing",
+        "Answer": "False",
+        "Explanation": "Temperature is a measure of the average kinetic energy of the particles in a substance, while heat is the transfer of energy between substances due to a temperature difference."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Heat always flows from a colder object to a hotter object.",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature where all molecular motion ceases.",
+        "Answer": "True",
+        "Explanation": "At absolute zero, the entropy of a perfect crystal is exactly zero, and there is no thermal motion."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Thermal energy is a form of potential energy",
+        "Answer": "False",
+        "Explanation": "Thermal energy is a form of kinetic energy, not potential energy. It is the energy that comes from the movement of particles within a substance."
+    },
+    {
+        "Question": "Heat always flows from a colder object to a hotter object",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    },
+    {
+        "Question": "The specific heat capacity of a substance is constant at all temperatures",
+        "Answer": "False",
+        "Explanation": "The specific heat capacity of a substance can vary with temperature. It is a measure of how much heat energy is needed to raise the temperature of a given mass of the substance by a certain temperature."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Heat always flows from a hotter object to a colder object",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle of thermodynamics known as the second law of thermodynamics."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature",
+        "Answer": "True",
+        "Explanation": "According to the third law of thermodynamics, absolute zero is the lowest temperature that is theoretically possible."
+    },
+    {
+        "Question": "Temperature and heat are the same thing",
+        "Answer": "False",
+        "Explanation": "Temperature is a measure of the average kinetic energy of the particles in a substance, while heat is the transfer of energy from one substance to another due to a temperature difference."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Temperature is a measure of the average kinetic energy of particles in a substance.",
+        "Answer": "True",
+        "Explanation": "Temperature is indeed a measure of the average kinetic energy of particles in a substance, as defined by the kinetic theory of gases."
+    },
+    {
+        "Question": "Heat and temperature are the same thing.",
+        "Answer": "False",
+        "Explanation": "Heat and temperature are not the same thing. Temperature is a measure of the average kinetic energy of particles, while heat is the transfer of energy from one substance to another due to a temperature difference."
+    },
+    {
+        "Question": "The second law of thermodynamics states that heat flows from a colder body to a hotter body.",
+        "Answer": "False",
+        "Explanation": "The second law of thermodynamics states that heat naturally flows from a hotter body to a colder body, and not the other way around."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Heat always flows from a colder object to a hotter object.",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature that can be reached.",
+        "Answer": "True",
+        "Explanation": "Absolute zero, at 0 Kelvin, is the lowest temperature possible where the particles of a substance have minimal motion."
+    },
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "The first law of thermodynamics, also known as the law of conservation of energy, states that the total energy of an isolated system remains constant."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Heat always flows from a hotter object to a colder object.",
+        "Answer": "True",
+        "Explanation": "This is a basic principle of thermodynamics, as heat naturally moves to equalize temperatures."
+    },
+    {
+        "Question": "The second law of thermodynamics states that it is impossible to reach absolute zero temperature.",
+        "Answer": "True",
+        "Explanation": "This law establishes the concept of entropy and the impossibility of a perfect heat engine."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Heat always flows from a colder object to a hotter object.",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature where all molecular motion ceases.",
+        "Answer": "True",
+        "Explanation": "At absolute zero, the entropy of a perfect crystal is exactly zero, and there is no thermal motion."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Heat always flows from a hotter object to a colder object.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle of thermodynamics known as the second law of thermodynamics."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature that can be reached.",
+        "Answer": "True",
+        "Explanation": "According to the third law of thermodynamics, absolute zero is the point at which the entropy of a perfect crystal is zero, and no more energy can be extracted from it."
+    },
+    {
+        "Question": "Temperature and heat are the same thing.",
+        "Answer": "False",
+        "Explanation": "Temperature is a measure of the average kinetic energy of the particles in a substance, while heat is the transfer of energy from one substance to another due to a difference in temperature."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Thermal energy is a form of potential energy",
+        "Answer": "False",
+        "Explanation": "Thermal energy is a form of kinetic energy associated with the motion of particles."
+    },
+    {
+        "Question": "Heat always flows from a colder object to a hotter object",
+        "Answer": "False",
+        "Explanation": "Heat naturally flows from a hotter object to a colder object, following the second law of thermodynamics."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature that can be reached",
+        "Answer": "True",
+        "Explanation": "At absolute zero, the thermal motion of particles ceases, and it is the lowest temperature theoretically achievable."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Heat always flows from a colder object to a hotter object.",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature, at which point all molecular motion ceases.",
+        "Answer": "True",
+        "Explanation": "This is the theoretical temperature at which the entropy of a perfect crystal is exactly zero."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Heat always flows from a colder object to a hotter object.",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature that can be reached.",
+        "Answer": "True",
+        "Explanation": "Absolute zero, at 0 Kelvin, is the lowest temperature possible where the particles of a substance have minimal motion."
+    },
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "The first law of thermodynamics, also known as the law of conservation of energy, states that the total energy of an isolated system remains constant."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Heat always flows from a hotter object to a colder object.",
+        "Answer": "True",
+        "Explanation": "This is a basic principle of thermodynamics, as heat naturally moves to equalize temperature differences."
+    },
+    {
+        "Question": "The second law of thermodynamics states that it is impossible to reach absolute zero temperature.",
+        "Answer": "True",
+        "Explanation": "This law establishes the concept of entropy and the impossibility of achieving a state of absolute coldness."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Heat always flows from a hotter object to a colder object",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle of thermodynamics known as the second law of thermodynamics."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature",
+        "Answer": "True",
+        "Explanation": "According to the third law of thermodynamics, absolute zero (0 Kelvin) is the lowest temperature that can theoretically be reached."
+    },
+    {
+        "Question": "Thermal expansion only occurs in solids",
+        "Answer": "False",
+        "Explanation": "Thermal expansion can occur in solids, liquids, and gases due to the increase in kinetic energy of the particles."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Heat always flows from a hotter object to a colder object.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle of thermodynamics known as the second law of thermodynamics."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature that can be reached.",
+        "Answer": "True",
+        "Explanation": "According to the third law of thermodynamics, as the temperature approaches absolute zero, the entropy of a perfect crystal approaches zero."
+    },
+    {
+        "Question": "The internal energy of an isolated system remains constant over time.",
+        "Answer": "True",
+        "Explanation": "This is a statement of the first law of thermodynamics, which is a restatement of the principle of conservation of energy."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Heat always flows from a colder object to a hotter object.",
+        "Answer": "False",
+        "Explanation": "According to the second law of thermodynamics, heat naturally flows from a hotter object to a colder object."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature where all molecular motion ceases.",
+        "Answer": "True",
+        "Explanation": "At absolute zero, the entropy of a perfect crystal is exactly zero, and there is no thermal motion."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Thermal energy is a form of kinetic energy",
+        "Answer": "True",
+        "Explanation": "Thermal energy is the energy that comes from the movement of particles within a substance."
+    },
+    {
+        "Question": "Heat always flows from a colder object to a hotter object",
+        "Answer": "False",
+        "Explanation": "Heat naturally flows from a hotter object to a colder object, following the second law of thermodynamics."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature",
+        "Answer": "True",
+        "Explanation": "Absolute zero, at 0 Kelvin, is the lowest temperature that can theoretically be reached, where particles have minimal kinetic energy."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Entropy in a closed system can decrease over time.",
+        "Answer": "False",
+        "Explanation": "The second law of thermodynamics states that the entropy of a closed system tends to increase over time, leading to the concept of irreversibility in natural processes."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature that can be reached, at which point the entropy of a perfect crystal is zero.",
+        "Answer": "True",
+        "Explanation": "This is a key concept in thermal physics, and it is the basis for the Kelvin temperature scale."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "Heat always flows from a hotter object to a colder object",
+        "Answer": "True",
+        "Explanation": "This statement is a fundamental principle of thermal physics known as the second law of thermodynamics."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature",
+        "Answer": "True",
+        "Explanation": "According to the third law of thermodynamics, absolute zero is the lowest temperature that is theoretically possible, at which the entropy of a perfect crystal is exactly zero."
+    },
+    {
+        "Question": "Thermal energy and temperature are the same thing",
+        "Answer": "False",
+        "Explanation": "Thermal energy is the total kinetic and potential energy of the particles in a substance, while temperature is a measure of the average kinetic energy of the particles."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Heat always flows from a hotter object to a colder object.",
+        "Answer": "True",
+        "Explanation": "This is a basic principle of thermodynamics, known as the second law of thermodynamics."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature where all molecular motion ceases.",
+        "Answer": "True",
+        "Explanation": "This is a key concept in thermal physics, and it is defined as 0 Kelvin or -273.15 degrees Celsius."
+    }
+]
+```
+
+```json
+[
+    {
+        "Question": "The first law of thermodynamics states that energy cannot be created or destroyed, only transformed from one form to another.",
+        "Answer": "True",
+        "Explanation": "This is a fundamental principle in thermal physics, also known as the law of conservation of energy."
+    },
+    {
+        "Question": "Heat always flows from a hotter object to a colder object.",
+        "Answer": "True",
+        "Explanation": "This is a basic principle of thermodynamics, known as the second law of thermodynamics."
+    },
+    {
+        "Question": "Absolute zero is the lowest possible temperature where all molecular motion ceases.",
+        "Answer": "True",
+        "Explanation": "According to the third law of thermodynamics, at absolute zero, the entropy of a perfect crystal is exactly zero."
+    }
+]
+```
+

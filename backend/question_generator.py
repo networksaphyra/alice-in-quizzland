@@ -21,7 +21,7 @@ class QuestionGenerator:
             return None
         return data_dict
 
-    def generate_multiple_choice_question(self, topic_query: str):
+    async def generate_multiple_choice_question(self, topic_query: str):
         while True:
             messages = [
                 {"role": "system", "content": ai_config.MULITPLE_CHOICE_SYSTEM_BEHAVIOR_PROMPT},
@@ -50,7 +50,7 @@ class QuestionGenerator:
             return None
         return data_dict
      
-    def generate_short_answer_question(self, topic_query: str):
+    async def generate_short_answer_question(self, topic_query: str):
         while True:
             messages = [
                 {"role": "system", "content": ai_config.SHORT_ANSWER_SYSTEM_BEHAVIOR_PROMPT},
@@ -78,7 +78,7 @@ class QuestionGenerator:
             return None
         return data_dict
      
-    def generate_true_or_false_question(self, topic_query: str):
+    async def generate_true_or_false_question(self, topic_query: str):
         while True:
             messages = [
                 {"role": "system", "content": ai_config.TRUE_OR_FALSE_SYSTEM_BEHAVIOR_PROMPT},
@@ -105,7 +105,7 @@ class QuestionGenerator:
             return None
         return data_dict
 
-    def confirmation_short_answer(self, client_data) -> dict:
+    async def confirmation_short_answer(self, client_data) -> dict:
         answer, client_answer = client_data
         while True:
             messages = [
@@ -126,7 +126,7 @@ class QuestionGenerator:
     
 
 if __name__ == "__main__":
-    async def main() -> dict:
+    async def main() -> list:
         topic = "thermal physics"
         multiple_choice_num = 1
         short_answer_num = 3
@@ -137,14 +137,13 @@ if __name__ == "__main__":
         ai_config.TRUE_OR_FALSE_QUESTION_NUM = true_or_false_num
 
         question_generator = QuestionGenerator()
-        generated_questions = []
-
-        await asyncio.gather(
-            generated_questions.append(question_generator.generate_multiple_choice_question(topic)),
-            generated_questions.append(question_generator.generate_short_answer_question(topic)),
-            generated_questions.append(question_generator.generate_true_or_false_question(topic)),
+        generated_questions = await asyncio.gather(
+            question_generator.generate_multiple_choice_question(topic),
+            question_generator.generate_short_answer_question(topic),
+            question_generator.generate_true_or_false_question(topic),
         )
         print("here")
         print(generated_questions)
-    
+        return generated_questions
+
     asyncio.run(main())
