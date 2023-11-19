@@ -31,7 +31,7 @@ class QuestionGenerator:
 
         return data_dict
      
-    def generate_short_answer_question(self, topic_query: str, num):
+    def generate_short_answer_question(self, topic_query: str):
         messages = [
             {"role": "system", "content": ai_config.SHORT_ANSWER_SYSTEM_BEHAVIOR_PROMPT},
             {"role": "user", "content": topic_query}
@@ -50,7 +50,7 @@ class QuestionGenerator:
 
         return data_dict
      
-    def generate_true_or_false_question(self, topic_query: str, num):
+    def generate_true_or_false_question(self, topic_query: str):
         messages = [
             {"role": "system", "content": ai_config.TRUE_OR_FALSE_SYSTEM_BEHAVIOR_PROMPT},
             {"role": "user", "content": topic_query}

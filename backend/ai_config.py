@@ -1,5 +1,5 @@
 API_KEY=open(".env", "r").readline().strip()
-MODEL = "gpt-3.5-turbo"
+MODEL = "gpt-3.5-turbo-1106"
 
 # Mutilple Choice
 MULTIPLE_CHOICE_TEMPERATURE = 0.1
