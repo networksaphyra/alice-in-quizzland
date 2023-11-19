@@ -123,17 +123,17 @@ export const UserForm = () => {
             <Textarea placeholder="Num of Questions" slotProps={{ textarea: { ref: numQuestionsRef } }} />
             <p></p>
 
-            <Stack spacing={2} direction="row" alignItems="center">
+            <Stack className="sliders" spacing={2} direction="row" alignItems="center">
                 <label>Multiple Choice:</label>
                 <Slider aria-label="multipleChoice" value={multipleChoice} onChange={(e, newNum) => { setMultipleChoice(newNum as number) }} />
             </Stack>
 
-            <Stack spacing={2} direction="row" alignItems="center">
+            <Stack className="sliders" spacing={2} direction="row" alignItems="center">
                 <label>Short Answer:</label>
                 <Slider aria-label="shortAnswer" value={shortAnswer} onChange={(e, newNum) => { setShortAnswer(newNum as number) }} />
             </Stack>
 
-            <Stack spacing={2} direction="row" alignItems="center">
+            <Stack className="sliders" spacing={2} direction="row" alignItems="center">
                 <label>True or False:</label>
                 <Slider aria-label="trueOrFalse" value={trueOrFalse} onChange={(e, newNum) => { setTrueOrFalse(newNum as number) }} />
             </Stack>
