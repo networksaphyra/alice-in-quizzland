@@ -5,6 +5,7 @@ import Textarea from '@mui/joy/Textarea';
 import { useRef, useState } from "react"
 import { VolumeDown, VolumeUp } from "@material-ui/icons";
 import axios from 'axios';
+import { Quiz } from "../types";
 
 export const UserForm = () => {
     const nameRef = useRef<HTMLTextAreaElement | null>(null);
@@ -13,6 +14,7 @@ export const UserForm = () => {
     const [multipleChoice, setMultipleChoice] = useState<number>(0);
     const [shortAnswer, setShortAnswer] = useState<number>(0);
     const [trueOrFalse, setTrueOrFalse] = useState<number>(0);
+    const [quiz, setQuiz] = useState<Quiz>()
 
     const submitData = () => {
       const total = multipleChoice + shortAnswer + trueOrFalse;
@@ -28,7 +30,15 @@ export const UserForm = () => {
           }
       })
       .then(function (response) {
-        console.log(response);
+        console.log(response)
+
+        let multipleChoice = [];
+        let longAnswer = [];
+        let trueOrFalse = [];
+        
+        for (let i of response.data.generated_questions) {
+          
+        }
       })
     };
 

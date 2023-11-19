@@ -13,10 +13,17 @@ export type LongAnswer = () => {
     correctRate: number
 }
 
+export type trueOrFalse = () => {
+    question: string
+    answer: string
+    correctRate: number
+}
+
 export type Quiz = () => {
     name: string
     multipleChoice: [MultipleChoice]
     longAnswer: [LongAnswer]
+    trueOrFalse: [trueOrFalse]
     correctRate: number
 }
 

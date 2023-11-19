@@ -15,14 +15,11 @@ def get_preferences() -> dict:
     print(multiple_choices_num, short_answer_num, true_or_false_num)
     generated_questions = []
 
-    for _ in range(multiple_choices_num):
-        generated_questions.append(question_creator.generate_multiple_choice_question(topic))
+    generated_questions.append(question_creator.generate_multiple_choice_question(topic, multiple_choices_num))
     print('here')
-    for _ in range(short_answer_num):
-        generated_questions.append(question_creator.generate_short_answer_question(topic))
+    generated_questions.append(question_creator.generate_short_answer_question(topic, short_answer_num))
     print('here')
-    for _ in range(true_or_false_num):
-        generated_questions.append(question_creator.generate_true_or_false_question(topic))
+    generated_questions.append(question_creator.generate_true_or_false_question(topic, true_or_false_num))
     print('here')
     return {'generated_questions': generated_questions}, 200
 

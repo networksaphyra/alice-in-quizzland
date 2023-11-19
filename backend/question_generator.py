@@ -9,17 +9,25 @@ class QuestionGenerator:
     def _extract_multiple_choice_data(self, response):
         filtered_response = response.choices[0].message.content
         data_dict = json.loads(filtered_response)
-        question = data_dict.get("Question", "")
-        options = data_dict.get("Options", [])
-        answer = data_dict.get("Answer", "")
-        explanation = data_dict.get("Explanation", "")
 
-        filtered_array = [question, options, answer, explanation]
-        return filtered_array
+        return data_dict
 
-    def generate_multiple_choice_question(self, topic_query: str):
+    def generate_multiple_choice_question(self, topic_query: str, num):
         messages = [
-            {"role": "system", "content": ai_config.MULITPLE_CHOICE_SYSTEM_BEHAVIOR_PROMPT},
+            {"role": "system", "content": f"""
+    Generate {num} question and multiple-choice options based on the provided topic. 
+    Return a perfectly working and valid JSON Array with Objects inside it.
+    The array and objects have the following format:
+    [
+    {{
+        "Question": "The question",
+        "Options": {"Option A", "Option B", "Option C", "Option D"},
+        "Answer": "Correct option for the question",
+        "Explanation": "A brief explanation for the answer for this question",
+    }},
+    ... repeat with {num} different questions
+    ]
+"""},
             {"role": "user", "content": topic_query}
         ]
         response = self.client.chat.completions.create(
@@ -33,16 +41,24 @@ class QuestionGenerator:
     def _extract_short_answer_data(self, response):
         filtered_response = response.choices[0].message.content
         data_dict = json.loads(filtered_response)
-        question = data_dict.get("Question", "")
-        answer = data_dict.get("Answer", "")
-        explanation = data_dict.get("Explanation", "")
 
-        filtered_array = [question, answer, explanation]
-        return filtered_array
+        return data_dict
      
-    def generate_short_answer_question(self, topic_query: str):
+    def generate_short_answer_question(self, topic_query: str, num):
         messages = [
-            {"role": "system", "content": ai_config.SHORT_ANSWER_SYSTEM_BEHAVIOR_PROMPT},
+            {"role": "system", "content": f"""
+    Generate {num} short question and a short answer on the provided topic. 
+    Return a perfectly working and valid JSON Array with Objects inside it.
+    The array and objects have the following format:
+    [
+    {{
+        "Question": "The question"
+        "Answer": "Short answer to the question"
+        "Explanation": "A brief explanation for the answer for this question"
+        }},
+    ... repeat with {num} different questions
+    ]
+"""},
             {"role": "user", "content": topic_query}
         ]
         response = self.client.chat.completions.create(
@@ -56,15 +72,23 @@ class QuestionGenerator:
     def _extract_true_or_false_data(self, response):
         filtered_response = response.choices[0].message.content
         data_dict = json.loads(filtered_response)
-        question = data_dict.get("Question", "")
-        answer = data_dict.get("Answer", "")
 
-        filtered_array = [question, answer]
-        return filtered_array
+        return data_dict
      
-    def generate_true_or_false_question(self, topic_query: str):
+    def generate_true_or_false_question(self, topic_query: str, num):
         messages = [
-            {"role": "system", "content": ai_config.TRUE_OR_FALSE_SYSTEM_BEHAVIOR_PROMPT},
+            {"role": "system", "content": f"""
+    Generate {num} statements that can only be true or false. Example: Questions: "The Earth is Round", Answer: True. Instead of some generic question such as: Question: "What shape is the earth?"
+    Return a perfectly working and valid JSON Array with Objects inside it.
+    The array and objects have the following format:
+    [
+    {{
+        "Question": "The question"
+        "Answer": "True or false answer to that question"
+    }},
+    ... repeat with {num} different questions
+    ]
+"""},
             {"role": "user", "content": topic_query}
         ]
         response = self.client.chat.completions.create(
