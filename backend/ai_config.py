@@ -48,7 +48,8 @@ TRUE_OR_FALSE_SYSTEM_BEHAVIOR_PROMPT=f"""
     [
     {{
         "Question": "The question",
-        "Answer": "True or false answer to that question"
+        "Answer": "True or false answer to that question",
+        "Explanation": "A brief explanation for the answer for this question",
     }},
     ]
 """
